@@ -1,22 +1,20 @@
-# Boilerplate for Node-Express with sequelize ORM
+# Green Campus API
 
-A boilerplate for any enterprise rest api or service with Node.js, Express and Sequelize ORM for mysql, postgresql or others.
-
-By running this project you will get a production ready environment with all necessary supports for validation, unit testing, socket, redis and many more.
+This backend system is created using Nodejs Backend API Boilerplate. This is a RESTful API using Node.js, Express, and MySQL.
 
 ## Manual Installation
 
 Clone the repo:
 
 ```bash
-git clone https://github.com/kazi-naimul/node-express-mysql-boilerplate
-cd node-express-mysql-boilerplate
+git clone https://github.com/wicahma/green-campus-backend
+cd green-campus-backend
 ```
 
 Install the dependencies:
 
 ```bash
-yarn install
+npm install
 ```
 
 Set the environment variables:
@@ -51,21 +49,13 @@ cp .env.example .env
 Running locally:
 
 ```bash
-yarn dev
+npm dev
 ```
 
 Running in production:
 
 ```bash
-yarn start
-```
-
-Testing:
-
-```bash
-# run all tests
-yarn test
-
+npm start
 ```
 
 ## Environment Variables
@@ -123,7 +113,3 @@ src\
  |--cronJobs.js     # Job Scheduler
  |--index.js        # App entry point
 ```
-
-## License
-
-[MIT](LICENSE)
