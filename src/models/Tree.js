@@ -8,8 +8,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.hasOne(models.tree_loc);
-      models.tree_loc.belongsTo(this);
+      this.hasOne(models.tree_loc, {
+        foreignKey: "treeId",
+        sourceKey: "uuid",
+      });
+      models.tree_loc.belongsTo(this, {
+        foreignKey: "treeId",
+        targetKey: "uuid",
+      });
 
       this.hasMany(models.synonim);
       models.synonim.belongsTo(this);

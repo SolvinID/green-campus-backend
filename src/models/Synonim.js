@@ -11,15 +11,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Synonim.init(
     {
-      treeId: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: "trees",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
-      },
       type: { type: DataTypes.ENUM, values: ["homotypic", "heterotypic"] },
       sciName: DataTypes.STRING,
       url: DataTypes.STRING,

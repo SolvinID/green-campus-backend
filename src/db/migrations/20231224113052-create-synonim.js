@@ -10,10 +10,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       treeId: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.UUID,
         references: {
           model: 'trees',
-          key: 'id',
+          key: 'uuid',
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',

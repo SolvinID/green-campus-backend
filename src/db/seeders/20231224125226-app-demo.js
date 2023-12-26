@@ -58,7 +58,7 @@ module.exports = {
 
     await queryInterface.bulkInsert("synonims", [
       {
-        treeId: 1,
+        treeId: "123e4567-e89b-12d3-a456-426614174001",
         type: "homotypic",
         sciName: "Maniltoa grandiflora (A.Gray)Scheff.",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:505905-1",
@@ -67,7 +67,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 1,
+        treeId: "123e4567-e89b-12d3-a456-426614174001",
         type: "heterotypic",
         sciName: "Cynometra grandiflora A.Gray",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:48819-1",
@@ -76,7 +76,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 1,
+        treeId: "123e4567-e89b-12d3-a456-426614174001",
         type: "homotypic",
         sciName: "Cynometra grandiflora A.Gray var. grandiflora",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:48820-1",
@@ -85,7 +85,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 2,
+        treeId: "123e4567-e89b-12d3-a456-426614174002",
         type: "homotypic",
         sciName: "Ficus benjamina var. benjamina",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:853542-1",
@@ -94,7 +94,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 2,
+        treeId: "123e4567-e89b-12d3-a456-426614174002",
         type: "heterotypic",
         sciName: "Ficus benjamina var. nitida Miq.",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:853543-1",
@@ -103,7 +103,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 2,
+        treeId: "123e4567-e89b-12d3-a456-426614174002",
         type: "heterotypic",
         sciName: "Ficus benjamina var. parvifolia Miq.",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:853544-1",
@@ -112,7 +112,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 2,
+        treeId: "123e4567-e89b-12d3-a456-426614174002",
         type: "homotypic",
         sciName: "Ficus benjamina var. puberula Miq.",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:853545-1",
@@ -121,7 +121,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 3,
+        treeId: "123e4567-e89b-12d3-a456-426614174003",
         type: "homotypic",
         sciName: "Cynometra grandiflora A.Gray var. grandiflora",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:48820-1",
@@ -130,7 +130,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 3,
+        treeId: "123e4567-e89b-12d3-a456-426614174003",
         type: "heterotypic",
         sciName: "Cynometra grandiflora A.Gray var. glabra Miq.",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:48821-1",
@@ -139,7 +139,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 3,
+        treeId: "123e4567-e89b-12d3-a456-426614174003",
         type: "heterotypic",
         sciName: "Cynometra grandiflora A.Gray var. pubescens Miq.",
         url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:48822-1",
@@ -183,7 +183,7 @@ module.exports = {
 
     await queryInterface.bulkInsert("tree_locs", [
       {
-        treeId: 1,
+        treeId: "123e4567-e89b-12d3-a456-426614174001",
         campusId: 4,
         description: "Depan Parkiran Mobil, Kampus Utama",
         lat: -7.833483342332187,
@@ -192,7 +192,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 2,
+        treeId: "123e4567-e89b-12d3-a456-426614174002",
         campusId: 4,
         description: "Disamping Parkiran Mobil",
         lat: -7.8338261183535645,
@@ -201,7 +201,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        treeId: 3,
+        treeId: "123e4567-e89b-12d3-a456-426614174003",
         campusId: 4,
         description: "Depan Parkiran Mobil",
         lat: -7.8338154896439685,
