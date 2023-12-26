@@ -6,7 +6,7 @@ module.exports = {
         password: config.dbPass,
         database: config.dbName,
         host: config.dbHost,
-        dialect: 'mysql',
+        dialect: 'mysql2',
         dialectOptions: {
             bigNumberStrings: true,
         },
@@ -16,7 +16,7 @@ module.exports = {
         password: config.dbPass,
         database: config.dbName,
         host: config.dbHost,
-        dialect: 'mysql',
+        dialect: 'mysql2',
         dialectOptions: {
             bigNumberStrings: true,
         },
@@ -27,7 +27,7 @@ module.exports = {
         database: config.dbName,
         host: config.dbHost,
         port: config.port,
-        dialect: 'mysql',
+        dialect: 'mysql2',
         dialectOptions: {
             bigNumberStrings: true,
         },
