@@ -1,5 +1,5 @@
 const httpStatus = require("http-status");
-const logger = require("../config/logger");
+// const logger = require("../config/logger");
 const SynonimService = require("../service/SynonimService");
 const TreeLocService = require("../service/TreeLocService");
 const TreeService = require("../service/TreeService");
@@ -16,7 +16,7 @@ class TreeController {
       const tree = await this.treeService.getTree(req.params.id);
       res.status(tree.statusCode).json(tree.response);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };
@@ -26,7 +26,7 @@ class TreeController {
       const tree = await this.treeService.getAllTree();
       res.status(tree.statusCode).json(tree.response);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };
@@ -36,10 +36,10 @@ class TreeController {
       const tree = await this.treeService.verifyQr(req.params.uuid);
       res.status(tree.statusCode).json(tree.response);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
-  }
+  };
 }
 
 module.exports = TreeController;

@@ -1,5 +1,5 @@
 const httpStatus = require("http-status");
-const logger = require("../config/logger");
+// const logger = require("../config/logger");
 const CampusService = require("../service/CampusService");
 
 class CampusController {
@@ -12,7 +12,7 @@ class CampusController {
       const campus = await this.campusService.getAllCampus();
       res.status(campus.statusCode).json(campus.response);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };
@@ -22,7 +22,7 @@ class CampusController {
       const campus = await this.campusService.getTreeonCampus(req.params.id);
       res.status(campus.statusCode).json(campus.response);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };

@@ -2,7 +2,7 @@ const httpStatus = require("http-status");
 const AuthService = require("../service/AuthService");
 const TokenService = require("../service/TokenService");
 const UserService = require("../service/UserService");
-const logger = require("../config/logger");
+// const logger = require("../config/logger");
 const { tokenTypes } = require("../config/tokens");
 
 class AuthController {
@@ -24,7 +24,7 @@ class AuthController {
       const { message, data } = user.response;
       res.status(user.statusCode).send({ status, message, data, tokens });
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };
@@ -36,7 +36,7 @@ class AuthController {
       );
       res.status(isExists.statusCode).send(isExists.response);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };
@@ -58,7 +58,7 @@ class AuthController {
       }
       res.status(user.statusCode).send({ status, code, message, data, tokens });
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };
@@ -84,7 +84,7 @@ class AuthController {
       const tokens = await this.tokenService.generateAuthTokens(user);
       res.send(tokens);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };
@@ -97,7 +97,7 @@ class AuthController {
       );
       res.status(responseData.statusCode).send(responseData.response);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };

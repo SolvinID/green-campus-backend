@@ -1,6 +1,6 @@
 const httpStatus = require("http-status");
 const TreeDao = require("../dao/TreeDao");
-const logger = require("../config/logger");
+// const logger = require("../config/logger");
 const { returnSuccess, returnError } = require("../helper/responseHandler");
 
 class TreeService {
@@ -21,7 +21,7 @@ class TreeService {
       }
       return returnSuccess(httpStatus.OK, "Tree Found!", tree);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       return returnError(httpStatus.BAD_GATEWAY, "Something went wrong!");
     }
   };
@@ -34,7 +34,7 @@ class TreeService {
       }
       return returnSuccess(httpStatus.OK, "Tree Found!", tree);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       return returnError(httpStatus.BAD_GATEWAY, "Something went wrong!");
     }
   };
@@ -47,10 +47,10 @@ class TreeService {
       }
       return returnSuccess(httpStatus.OK, "Data Accepted!", tree);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       return returnError(httpStatus.BAD_GATEWAY, "Something went wrong!");
     }
-  }
+  };
 }
 
 module.exports = TreeService;

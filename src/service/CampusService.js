@@ -1,5 +1,5 @@
 const httpStatus = require("http-status");
-const logger = require("../config/logger");
+// const logger = require("../config/logger");
 const { returnSuccess, returnError } = require("../helper/responseHandler");
 const CampusDao = require("../dao/CampusDao");
 
@@ -21,7 +21,7 @@ class CampusService {
       }
       return returnSuccess(httpStatus.OK, "Campus Found!", campus);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       return returnError(httpStatus.BAD_GATEWAY, "Something went wrong!");
     }
   };
@@ -40,7 +40,7 @@ class CampusService {
       }
       return returnSuccess(httpStatus.OK, "Campus Found!", campus);
     } catch (e) {
-      logger.error(e);
+      // logger.error(e);
       return returnError(httpStatus.BAD_GATEWAY, "Something went wrong!");
     }
   };
