@@ -4,12 +4,10 @@ const { Op } = require('sequelize');
 const config = require('../config/config');
 const { tokenTypes } = require('../config/tokens');
 const TokenDao = require('../dao/TokenDao');
-const RedisService = require('./RedisService');
 
 class TokenService {
     constructor() {
         this.tokenDao = new TokenDao();
-        this.redisService = new RedisService();
     }
 
     /**
@@ -144,7 +142,6 @@ class TokenService {
                 expires: refreshTokenExpires.toDate(),
             },
         };
-        await this.redisService.createTokens(user.uuid, tokens);
 
         return tokens;
     };

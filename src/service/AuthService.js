@@ -5,13 +5,11 @@ const TokenDao = require('../dao/TokenDao');
 const { tokenTypes } = require('../config/tokens');
 const responseHandler = require('../helper/responseHandler');
 const logger = require('../config/logger');
-const RedisService = require('./RedisService');
 
 class AuthService {
     constructor() {
         this.userDao = new UserDao();
         this.tokenDao = new TokenDao();
-        this.redisService = new RedisService();
     }
 
     /**
@@ -67,8 +65,6 @@ class AuthService {
             type: tokenTypes.ACCESS,
             blacklisted: false,
         });
-        await this.redisService.removeToken(req.body.access_token, 'access_token');
-        await this.redisService.removeToken(req.body.refresh_token, 'refresh_token');
         return true;
     };
 }
