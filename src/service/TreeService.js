@@ -25,6 +25,32 @@ class TreeService {
       return returnError(httpStatus.BAD_GATEWAY, "Something went wrong!");
     }
   };
+
+  getAllTree = async () => {
+    try {
+      const tree = await this.treeDao.findAll();
+      if (!tree) {
+        return returnError(httpStatus.NOT_FOUND, "Tree Not Found!");
+      }
+      return returnSuccess(httpStatus.OK, "Tree Found!", tree);
+    } catch (e) {
+      logger.error(e);
+      return returnError(httpStatus.BAD_GATEWAY, "Something went wrong!");
+    }
+  };
+
+  verifyQr = async (uuid) => {
+    try {
+      const tree = await this.treeDao.findOneByWhere({ uuid });
+      if (!tree) {
+        return returnError(httpStatus.NOT_FOUND, "Tree Not Found!");
+      }
+      return returnSuccess(httpStatus.OK, "Data Accepted!", tree);
+    } catch (e) {
+      logger.error(e);
+      return returnError(httpStatus.BAD_GATEWAY, "Something went wrong!");
+    }
+  }
 }
 
 module.exports = TreeService;

@@ -13,16 +13,33 @@ class TreeController {
 
   getTree = async (req, res) => {
     try {
-
-      console.log(req.params.id);
       const tree = await this.treeService.getTree(req.params.id);
       res.status(tree.statusCode).json(tree.response);
-
     } catch (e) {
       logger.error(e);
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };
+
+  getAllTree = async (req, res) => {
+    try {
+      const tree = await this.treeService.getAllTree();
+      res.status(tree.statusCode).json(tree.response);
+    } catch (e) {
+      logger.error(e);
+      res.status(httpStatus.BAD_GATEWAY).send(e);
+    }
+  };
+
+  verifyQr = async (req, res) => {
+    try {
+      const tree = await this.treeService.verifyQr(req.params.uuid);
+      res.status(tree.statusCode).json(tree.response);
+    } catch (e) {
+      logger.error(e);
+      res.status(httpStatus.BAD_GATEWAY).send(e);
+    }
+  }
 }
 
 module.exports = TreeController;

@@ -14,11 +14,6 @@ class CampusDao extends SuperDao {
       include: {
         model: models.tree_loc,
         required: true,
-        include: {
-          model: models.tree,
-          required: true,
-          attributes: ["id", "name", "sciName", "image"],
-        },
       },
     });
   }
