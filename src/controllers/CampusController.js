@@ -17,7 +17,7 @@ class CampusController {
     }
   };
 
-  getTreeonCampus = async (req, res) => {
+  getTreesOnCampus = async (req, res) => {
     try {
       const campus = await this.campusService.getTreeonCampus(req.params.id);
       res.status(campus.statusCode).json(campus.response);

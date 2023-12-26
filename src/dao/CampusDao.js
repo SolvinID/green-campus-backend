@@ -14,6 +14,12 @@ class CampusDao extends SuperDao {
       include: {
         model: models.tree_loc,
         required: true,
+        attributes: {
+          exclude: ["createdAt", "updatedAt", "description"],
+        },
+      },
+      attributes: {
+        exclude: ["createdAt", "updatedAt"],
       },
     });
   }

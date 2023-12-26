@@ -40,6 +40,16 @@ class TreeController {
       res.status(httpStatus.BAD_GATEWAY).send(e);
     }
   };
+
+  checkLocation = async (req, res) => {
+    try {
+      const tree = await this.treeLocService.checkLocation(req.params.locId);
+      res.status(tree.statusCode).json(tree.response);
+    } catch (e) {
+      // logger.error(e);
+      res.status(httpStatus.BAD_GATEWAY).send(e);
+    }
+  };
 }
 
 module.exports = TreeController;
